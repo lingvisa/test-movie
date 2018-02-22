@@ -27,7 +27,7 @@ public class Movie {
 	private String tagline;
 
 	@Relationship(type = "ACTED_IN", direction = Relationship.INCOMING)
-	private List<Person> roles = new ArrayList<>();
+	private List<Person> persons = new ArrayList<>();
 
 	public Movie() {
 	}
@@ -58,13 +58,13 @@ public class Movie {
 		return tagline;
 	}
 
-	public Collection<Person> getRoles() {
-		return roles;
+	public Collection<Person> getpersons() {
+		return persons;
 	}
 
-	public void setRoles(List<Person> roles) {this.roles = roles;}
+	public void setpersons(List<Person> persons) {this.persons = persons;}
 
-	public void addRole(Person role) {
-		this.roles.add(role);
+	public void addperson(Person person) {
+		this.persons.add(person);
 	}
 }
